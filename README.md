@@ -29,4 +29,4 @@ by reading the STM32F407 Reference Manual (RM0090).
 | SYSCFG->EXTICR | Port-to-EXTI-line routing |
 | NVIC ISER/ICER/IPR | Interrupt enable and priority |
 
-## Project structure
+
