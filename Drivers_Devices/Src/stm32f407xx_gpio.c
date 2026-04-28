@@ -93,7 +93,7 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 			EXTI->FTSR &= ~(1 << pGPIOHandle->PinConfig.PinNumber);
 			EXTI->RTSR |= (1 << pGPIOHandle->PinConfig.PinNumber);
 		}
-		else if(pGPIOHandle->PinConfig.PinMode == GPIO_MODE_IT_FT)
+		else if(pGPIOHandle->PinConfig.PinMode == GPIO_MODE_IT_RFT)
 		{
 			EXTI->FTSR |= (1 << pGPIOHandle->PinConfig.PinNumber);
 			EXTI->RTSR |= (1 << pGPIOHandle->PinConfig.PinNumber);

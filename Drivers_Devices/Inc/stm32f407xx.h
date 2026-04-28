@@ -45,6 +45,9 @@
 #define NVIC_PR_BASE_ADDR   ((__VO uint32_t*)0xE000E400)
 #define NO_PR_BITS_IMPLEMENTED   4   // STM32F4 has 4 bits of priority
 
+#define ENABLE   1
+#define DISABLE  0
+
 
 /** Peripheral_interrupt_number_definition
  * @brief STM32F4XX Interrupt Number Definition, according to the selected device

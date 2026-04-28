@@ -61,7 +61,7 @@ main-build: Custom_drivers.elf secondary-outputs
 
 # Tool invocations
 Custom_drivers.elf Custom_drivers.map: $(OBJS) $(USER_OBJS) E:\Device_Drivers\Custom_drivers\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Custom_drivers.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"E:\Device_Drivers\Custom_drivers\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Custom_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "Custom_drivers.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"E:\Device_Drivers\Custom_drivers\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Custom_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
